@@ -1,4 +1,4 @@
-﻿var
+var
 mout, min, sms, P:real; //минуты входящих, минуты исходящих, количество смс с номера, цена
 num:string; //данный номер телефона
 k:array[1..3] of real; //массив множителей тарифного плана
@@ -13,10 +13,6 @@ k[3]:=1;
 free[1]:=0;
 free[2]:=50;
 free[3]:=0;
-mout:=0;
-min:=0;
-sms:=0;
-P:=0;
 skip:=False;
 foreach var s in ReadLines('data.csv') do begin //ReadLines открывает файл и преобразует в последовательность строк, foreach проводит цикл для каждой
   if skip=True then begin
