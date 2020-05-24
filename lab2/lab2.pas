@@ -10,7 +10,7 @@ f:= 'Информация по ip 192.168.250.41'+#10+'Время, байтов 
 foreach var s in ReadLines('data2.csv') do begin //ReadLines открывает файл и преобразует в последовательность строк, foreach проводит цикл для каждой
   c:= s.toWords(','); //разделяет строки на слова с разделителем запятая, помещает в массив с
   if c[0]='Summary' then break//прерывается, когда доходит до конца
-  else if c[4]=ip then begin //если ip найден в поле da
+  else if c[3]=ip then begin //если ip найден в поле da
    nbyte:= StrToFloat(c[12]); //strtofloat переводит строку в real
    sumbyte+=nbyte;
    f+= c[0]+','+nbyte+','+sumbyte+#10;
